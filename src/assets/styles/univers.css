@@ -15,7 +15,7 @@ body{
 }
 @font-face {
     font-family: 'hpfont';
-    src:url(../images/HarryP-MVZ6w.ttf);
+    src:url(../font/HarryP-MVZ6w.ttf);
 }
 .wrapper{
     overflow: hidden;
