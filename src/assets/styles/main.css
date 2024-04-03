@@ -752,9 +752,10 @@ label {
 .closediv {
 
     bottom: 90%;
-    position:fixed;
+    position:absolute;
     margin: 1px;
-    padding:1px;
+    padding:1px;background-color: white;
+
 }
 #secondimage {
     background-image: url("/src/assets/images/maquette_landing_projet.jpg");
