@@ -15,7 +15,7 @@ body{
 }
 @font-face {
     font-family: 'hpfont';
-    src:url(./assets/images/HarryP-MVZ6w.ttf);
+    src:url(../images/HarryP-MVZ6w.ttf);
 }
 .wrapper{
     overflow: hidden;
@@ -25,7 +25,7 @@ body{
 }
 .main{
     flex: 1 1 auto;
-    background: url('./assets/images/wallpaperflare-cropped.jpg');
+    background: url('../images/wallpaperflare-cropped.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     /* height: 800px; */
