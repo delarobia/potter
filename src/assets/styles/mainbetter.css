@@ -85,10 +85,44 @@
   }
 
   body .header,footer{
+    display:none;
+
+    
+}
+
+@media only screen and (max-width: 425px) {
+  body .header,footer{
     height: 1vh;
     display: flex!important;
     
     flex-direction: column;
+    min-height: 10%;
+    min-width: 100%;
+
+    
+}
+body {
+
+  display: flex;
+  flex-direction: column;
+  min-height: 99%;
+  min-width: 99%;
+  overflow-y: scroll;
+  
+  
+
+}
+img {
+
+    
+  max-height: 100%;
+  max-width: 100%;
+  height: 33%;
+  width: 100vw;
+  object-fit: cover;
+
+  
+}
 }
 
   
