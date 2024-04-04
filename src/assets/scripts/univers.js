@@ -61,7 +61,6 @@ function tooltip(event){
 }
 
 
-
 document.addEventListener("mousedown", cursorCast);
 document.addEventListener("mouseup",hideCast)
 let isVisible = false;

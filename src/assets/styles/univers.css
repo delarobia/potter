@@ -136,7 +136,7 @@ header{
 }
 .main_item img:hover{
     scale: 1.1;
-    filter: brightness(1.15);
+    filter:brightness(1.1);
 }
 @media (max-width: 769px) {
 	.main_item img{
