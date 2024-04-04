@@ -2,6 +2,7 @@ let smart = window.matchMedia("(max-width: 769px)");
 const tooltipBody = document.querySelector('.tooltip__body');
 const tooltipTitle = tooltipBody.querySelector('.tooltip__title');
 const tooltipText = tooltipBody.querySelector('.tooltip__text');
+const wrapper = document.querySelector('.wrapper');
 
 
 if (smart.matches) { 
