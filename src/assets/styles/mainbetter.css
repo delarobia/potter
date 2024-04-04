@@ -7,7 +7,7 @@
 .conteneur {
     position: relative;
     text-align: center;
-    color: gold;
+    color: #EBEFD7;
     flex-wrap: wrap;
     font-family: 'hpfont';
     text-align: center;
@@ -61,6 +61,7 @@
     left:0%;
     /*transform: translate(-50%, -50%);*/
     margin: 1rem;
+    font-size: x-large;
     
   }
   .main {
@@ -72,7 +73,7 @@
     
   
   }
-  img {
+  .modifimages {
 
     
     max-height: 100%;
@@ -113,7 +114,8 @@
   
 
 }
-img {
+
+.modifimages {
 
     
   max-height: 100%;
@@ -125,6 +127,7 @@ img {
   
 }
 }
+
 
   
   
