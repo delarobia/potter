@@ -35,15 +35,21 @@ header{
     background: url('../images/wallpaperflare-cropped.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 800px; */
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 100px;
 }
-@media (max-width: 769px) {
+@media (max-width: 620px) {
 	.main {
         padding-bottom: 0;
+        background-position: -1130px -100px;
+	}
+}
+@media only screen and (min-width: 620px) and (max-width: 769px) {
+	.main {
+        padding-bottom: 0;
+        background-position: -730px -100px;
 	}
 }
 .page__main {
