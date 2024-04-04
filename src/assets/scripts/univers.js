@@ -1,20 +1,27 @@
+let smart = window.matchMedia("(max-width: 769px)");
 const tooltipBody = document.querySelector('.tooltip__body');
 const tooltipTitle = tooltipBody.querySelector('.tooltip__title');
 const tooltipText = tooltipBody.querySelector('.tooltip__text');
 
 
-document.addEventListener("mousedown", tooltip);
-document.addEventListener("mouseup",tooltipOff);
+if (smart.matches) { 
+    document.addEventListener("touchstart", tooltip);
+} 
+else {
+    document.addEventListener("mousedown", tooltip); 
+}
 
 function tooltip(event){
+     if(!event.target.closest('.tooltip__body')){
+        tooltipBody.classList.remove('_active');
+    }
+
     if(event.target.closest('.main_item._char1')){
         tooltipTitle.textContent = "Harry Potter";
         tooltipText.textContent = "Harry est assez timide et plutôt modeste.Il reconnaît très volontiers la difficulté,voire l'incapacité, d'affronter ses peurs etson principal ennemi sans l'aide précieuse de ses amis,en particulier celle de Ron et d'Hermione.Comme d'autres élèves de la maison Gryffondor àlaquelle il appartient, Harry sait faire preuve de courageet de discernement, même si ses sentiments l'emportentquelquefois sur sa sagesse (comme Hermione le lui rappelle souvent).Il peut aussi lui arriver quelquefois de perdre patience et de faire exploser sa colère, notamment en cinquième année, alors qu'il est tenu volontairement à l'écart des événements majeurs par les membres de l'Ordre du Phénix, et après la mort de son parrain, alors qu'il est retenu dans le bureau de Dumbledore. Bien que ce dernier soit considéré comme mentor et figure de bienveillance, il arrive à plusieurs reprises que Harry et Dumbledore en viennent à hausser le ton.";
         tooltipBody.classList.toggle('_active');
     }
-    // if(!event.target.closest('.main_item')){
-    //     tooltipBody.classList.remove('_active');
-    // }
+   
     if(event.target.closest('.main_item._char2')){
         tooltipTitle.textContent = "Hermione Jean Granger";
         tooltipText.textContent = "Amie proche de Harry Potter et de Ron Weasley, Hermione fait figure de droiture et d'esprit tout au long de l'histoire. Née de parents moldus, elle est particulièrement douée pour la magie et intéressée par le monde magique et les connaissances qui l'entourent. Elle se montre d'un grand secours auprès de ses camarades de Poudlard et fonde l'Armée de Dumbledore avec Harry et Ron en cinquième année afin de contrer leur nouveau professeur de défense contre les forces du mal, Dolores Ombrage, et s'entraîner à se défendre. Hermione et Ron aident ensuite Harry à trouver et à détruire tous les horcruxes de Voldemort, pour permettre à Harry de le vaincre.";
@@ -51,11 +58,6 @@ function tooltip(event){
         tooltipBody.classList.toggle('_active');
     }
     
-}
-function tooltipOff(event){
-    if(!event.target.closest('.cast')){
-        tooltipBody.classList.remove('_active');
-    }
 }
 
 document.addEventListener("mousedown", cursorCast);

@@ -35,6 +35,11 @@ body{
     align-items: center;
     padding-bottom: 100px;
 }
+@media (max-width: 769px) {
+	.main {
+        padding-bottom: 0;
+	}
+}
 .page__main {
 }
 .characters__container {
@@ -53,12 +58,19 @@ body{
     flex-wrap: wrap;
     margin-top: 50px;
     margin-bottom: 200px;
-    font-size: 60px;
     line-height: 150px;
     font-size: 180px;
     padding: 5px;
     color: rgb(19, 16, 54);
     text-shadow: rgb(45, 85, 146) 15px 0 10px;
+}
+@media (max-width: 769px) {
+	.characters__title {
+        font-size: 80px;
+        line-height: 80px;
+        margin-bottom: 30px;
+        padding: 0 30px;
+	}
 }
 .characters__subtitle {
     margin: 40px 0px;
@@ -67,23 +79,45 @@ body{
     color: rgb(216, 184, 5);
     text-shadow: 3px 3px 0 rgb(0, 0, 0);
 }
+@media (max-width: 769px) {
+	.characters__subtitle {
+        font-size: 30px;
+        line-height: 50px;
+        margin: 50px 0;
+        padding: 0 30px;
+	}
+}
 .characters__items {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 40px 0;
+    margin-bottom: 140px;
 }
+
 .main_item{
 }
 .main_item img{
     width: 425px;
     height: 255px;
     margin: 5px;
-    /* cursor: pointer; */
     box-shadow: 5px 5px black;
     border: 2px solid rgb(250, 184, 3);
     border-radius: 10px;
     z-index: 100;
+}
+@media (max-width: 769px) {
+	.main_item img{
+        width: 300px;
+        height: 185px;
+        margin-bottom: 10px;
+	}
+}
+@media (max-width: 300px) {
+	.main_item img{
+        width: 225px;
+        height: 155px;
+        margin-bottom: 10px;
+	}
 }
 .tooltip__body{
     position: absolute;
@@ -97,6 +131,35 @@ body{
     top:30rem;
     visibility: hidden;
 }
+@media (max-width: 1500px) {
+	.tooltip__body{
+        width: 580px;
+        position: fixed;
+	}
+    .tooltip__body:last-child{
+        top: 10rem;
+    }
+}
+@media (max-width: 769px) {
+	.tooltip__body{
+        width: 360px;
+        position: fixed;
+        top: 15rem;
+	}
+    .tooltip__body:last-child{
+        top: 10rem;
+    }
+}
+@media (max-width: 300px) {
+	.tooltip__body{
+        width: 280px;
+        position: fixed;
+        top: 13rem;
+	}
+    .tooltip__body:last-child{
+        top: 9rem;
+    }
+}
 .tooltip__body._active{
     visibility: visible;
 }
@@ -106,6 +169,12 @@ body{
     color: rgb(199, 180, 5);
     margin-top: 20px;
 }
+@media (max-width: 769px) {
+	.tooltip__title{
+        font-size: 30px;
+        line-height: 20px;
+	}
+}
 .tooltip__text{
     text-align: justify;
     color: white;
@@ -113,11 +182,17 @@ body{
     line-height: 36px;
     padding: 40px 25px;
 }
-/* header,footer{
-    height: 100px;
+@media (max-width: 769px) {
+	.tooltip__text{
+        font-size: 14px;
+        line-height: 12px;
+	}
+}
+
+/* 
+.custom_cursor{
+    cursor: url('../images/hp_cursor_transp_120x67.png') 2 2, auto !important;
 } */
-
-
 
 /* cursor cast */
 #cast{
