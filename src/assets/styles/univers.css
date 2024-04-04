@@ -132,6 +132,11 @@ header{
     border: 2px solid rgb(250, 184, 3);
     border-radius: 10px;
     z-index: 100;
+    transition: 0.3s ease-in;
+}
+.main_item img:hover{
+    scale: 1.1;
+    filter: brightness(1.15);
 }
 @media (max-width: 769px) {
 	.main_item img{
