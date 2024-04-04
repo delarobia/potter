@@ -1,8 +1,20 @@
 /* Container holding the image and the text */
+@font-face {
+  font-family: 'hpfont';
+ 
+  src: url("../images/HarryP-MVZ6w.ttf");
+}
 .container {
     position: relative;
     text-align: center;
     color: gold;
+    flex-wrap: wrap;
+    font-family: 'hpfont';
+    text-align: center;
+    line-height: 20px;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    font-weight: 100;
+
     
 
 
@@ -72,4 +84,50 @@
     
   }
 
+  body .header,footer{
+    display:none;
+
+    
+}
+
+@media only screen and (max-width: 425px) {
+  body .header,footer{
+    height: 5vh;
+    display: flex!important;
+    
+    flex-direction: column;
+    min-height: 10%;
+    min-width: 100%;
+
+    
+}
+body {
+
+  display: flex;
+  flex-direction: column;
+  min-height: 99%;
+  min-width: 99%;
+  overflow-y: scroll;
+  
+  flex: 0%;
+  
+
+}
+img {
+
+    
+  max-height: 100%;
+  max-width: 100%;
+  height: 33vh;
+  width: 100vw;
+  object-fit: cover;
+
+  
+}
+}
+
+  
+  
+
+  
   
