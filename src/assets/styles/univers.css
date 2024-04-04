@@ -219,14 +219,10 @@ header{
 a:hover{
     cursor: url('../images/hp_cursor_transp_120x67.png') 2 2, auto !important;
 }
-/* 
-.custom_cursor{
-    cursor: url('../images/hp_cursor_transp_120x67.png') 2 2, auto !important;
-} */
+
+
 
 /* cursor cast */
-
-
 #cast{
     position: absolute;
     width: 40px;
