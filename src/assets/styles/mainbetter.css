@@ -4,7 +4,7 @@
  
   src: url("../images/HarryP-MVZ6w.ttf");
 }
-.container {
+.conteneur {
     position: relative;
     text-align: center;
     color: gold;
@@ -63,7 +63,7 @@
     margin: 1rem;
     
   }
-  body {
+  .main {
 
     display: flex;
     flex-direction: row;
@@ -84,14 +84,14 @@
     
   }
 
-  body .header,footer{
+  .main .header,footer{
     display:none;
 
     
 }
 
 @media only screen and (max-width: 425px) {
-  body .header,footer{
+  .main .header,footer{
     height: 5vh;
     display: flex!important;
     
@@ -101,7 +101,7 @@
 
     
 }
-body {
+.main {
 
   display: flex;
   flex-direction: column;
