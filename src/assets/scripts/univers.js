@@ -2,7 +2,9 @@ const tooltipBody = document.querySelector('.tooltip__body');
 const tooltipTitle = tooltipBody.querySelector('.tooltip__title');
 const tooltipText = tooltipBody.querySelector('.tooltip__text');
 
-document.addEventListener("click", tooltip);
+
+document.addEventListener("mousedown", tooltip);
+document.addEventListener("mouseup",tooltipOff);
 
 function tooltip(event){
     if(event.target.closest('.main_item._char1')){
@@ -10,9 +12,9 @@ function tooltip(event){
         tooltipText.textContent = "Harry est assez timide et plutôt modeste.Il reconnaît très volontiers la difficulté,voire l'incapacité, d'affronter ses peurs etson principal ennemi sans l'aide précieuse de ses amis,en particulier celle de Ron et d'Hermione.Comme d'autres élèves de la maison Gryffondor àlaquelle il appartient, Harry sait faire preuve de courageet de discernement, même si ses sentiments l'emportentquelquefois sur sa sagesse (comme Hermione le lui rappelle souvent).Il peut aussi lui arriver quelquefois de perdre patience et de faire exploser sa colère, notamment en cinquième année, alors qu'il est tenu volontairement à l'écart des événements majeurs par les membres de l'Ordre du Phénix, et après la mort de son parrain, alors qu'il est retenu dans le bureau de Dumbledore. Bien que ce dernier soit considéré comme mentor et figure de bienveillance, il arrive à plusieurs reprises que Harry et Dumbledore en viennent à hausser le ton.";
         tooltipBody.classList.toggle('_active');
     }
-    if(!event.target.closest('.main_item')){
-        tooltipBody.classList.remove('_active');
-    }
+    // if(!event.target.closest('.main_item')){
+    //     tooltipBody.classList.remove('_active');
+    // }
     if(event.target.closest('.main_item._char2')){
         tooltipTitle.textContent = "Hermione Jean Granger";
         tooltipText.textContent = "Amie proche de Harry Potter et de Ron Weasley, Hermione fait figure de droiture et d'esprit tout au long de l'histoire. Née de parents moldus, elle est particulièrement douée pour la magie et intéressée par le monde magique et les connaissances qui l'entourent. Elle se montre d'un grand secours auprès de ses camarades de Poudlard et fonde l'Armée de Dumbledore avec Harry et Ron en cinquième année afin de contrer leur nouveau professeur de défense contre les forces du mal, Dolores Ombrage, et s'entraîner à se défendre. Hermione et Ron aident ensuite Harry à trouver et à détruire tous les horcruxes de Voldemort, pour permettre à Harry de le vaincre.";
@@ -48,5 +50,34 @@ function tooltip(event){
         tooltipText.textContent = "C'est un sorcier doté de pouvoirs considérables, qui cherche à s'imposer sur le monde des sorciers afin de remodeler celui-ci selon ses idéaux. Il est appelé « le Seigneur des Ténèbres » par ses fidèles mangemorts, « Tu-Sais-Qui » ou « Celui-Dont-On-Ne-Doit-Pas-Prononcer-Le-Nom » par la population magique qu'il terrifie, ou tout simplement « Voldemort » par Harry Potter et quelques-uns des membres de l'ordre du Phénix, destiné à le contrer.";
         tooltipBody.classList.toggle('_active');
     }
+    
+}
+function tooltipOff(event){
+    if(!event.target.closest('.cast')){
+        tooltipBody.classList.remove('_active');
+    }
+}
 
+document.addEventListener("mousedown", cursorCast);
+document.addEventListener("mouseup",hideCast)
+let isVisible = false;
+
+function cursorCast(e){
+    if(!isVisible){
+        isVisible = true;
+        const cast = document.getElementById('cast');
+        const cloneCast = cast.cloneNode(true);
+        cloneCast.classList.add('_clone');
+        cloneCast.style.top = (e.pageY || e.clientY) + 'px';
+        cloneCast.style.left = (e.pageX || e.clientX) + 'px';
+        cloneCast.style.visibility = 'visible';
+        document.body.appendChild(cloneCast);
+    }
+}
+function hideCast(){
+    if(isVisible){
+        const cloneCast = document.querySelector('._clone');
+        document.body.removeChild(cloneCast);
+    }
+    isVisible = false;
 }
