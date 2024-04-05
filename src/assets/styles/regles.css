@@ -1,0 +1,9 @@
+body {
+    background-image: url('../images/plateau_samise.png');
+    background-size: cover;
+}
+
+#main {
+    margin-top: 65px;
+    margin-bottom: 85px;
+}
